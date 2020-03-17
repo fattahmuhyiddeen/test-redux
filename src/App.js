@@ -3,11 +3,13 @@ import './App.css';
 import { connect } from 'react-redux';
 import { setName } from './redux/ducks/profile';
 import Sample from './Sample';
+import { editValue } from './redux/ducks/general';
 
 function App(props) {
   return (
     <div
-      onClick={() => props.setName('hello')}
+      // onClick={() => props.setName('hello')}
+      onClick={() => props.editValue()}
       className="container">
       <Sample />
     </div>
@@ -20,7 +22,8 @@ const mapStateToProps = state => ({
 
 // Look how simple this is now!
 const mapDispatchToProps = {
-  setName
+  setName,
+  editValue
 };
 
 export default connect(
