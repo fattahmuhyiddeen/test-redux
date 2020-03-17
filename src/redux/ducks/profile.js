@@ -6,8 +6,10 @@ export const setName = data => ({
   type: SET_NAME,
   data,
 });
+
 const initialState = {
   name: 'fattah',
+  number: 0,
 };
 
 export default (state = initialState, action) => {

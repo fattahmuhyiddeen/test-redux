@@ -2,13 +2,14 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { setName } from './redux/ducks/profile';
+import Sample from './Sample';
 
 function App(props) {
   return (
     <div
       onClick={() => props.setName('hello')}
       className="container">
-      {props.profile.name}
+      <Sample />
     </div>
   );
 }
